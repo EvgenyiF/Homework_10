@@ -8,16 +8,17 @@ int n = Convert.ToInt16(Console.ReadLine());
 
 void NaturalNumber(int m, int n)
 {
-    if (m < n)
+    if (m == n) Console.Write($" {n} ");
+    else if (m < n)
     {
-        Console.Write($"{n} ");
+        Console.Write($" {n} ");
         NaturalNumber(m, n-1);
     }
-    if (m > n)
+    else
     {
-        Console.Write($"{m} ");
+        Console.Write($" {m} ");
         NaturalNumber(m-1, n);
     }
-    if (m == n) Console.Write($"{n} ");
+    
 }
 NaturalNumber(m, n);
